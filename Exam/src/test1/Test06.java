@@ -18,9 +18,11 @@ public class Test06 {
 		System.out.print("y값 입력 : ");
 		int y = sc.nextInt();
 		
-			          = x > y ? "x가 더 큽니다." : "y가 더 큽니다.";
-		
+		String result = x > y ? "x가 더 큽니다." : "y가 더 큽니다.";
+		// 식이 참이면 처음 값이 나오고, 거짓이면 뒤에 값이 나온다.
 		System.out.println(result);
+		
+		sc.close();
 	}
 
 }

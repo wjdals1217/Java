@@ -11,7 +11,7 @@ public class Test07 {
 		int total =0;
 		
 		for(int k=1 ; k<=10 ; k++) {
-			if() {
+			if( k % 2 ==0 || k % 3 ==0) {
 				total += k;
 			}
 		}
