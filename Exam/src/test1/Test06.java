@@ -12,7 +12,7 @@ public class Test06 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("x갑 입력 : ");
+		System.out.print("x값 입력 : ");
 		int x = sc.nextInt();
 		
 		System.out.print("y값 입력 : ");
