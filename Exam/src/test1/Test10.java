@@ -14,7 +14,7 @@ public class Test10 {
 		int n3;
 		
 		System.out.print(n1+", ");
-		System.out.println(n2+", ");
+		System.out.print(n2+", ");
 		
 		for(int i=1 ; i<=10 ; i++) {
 			
