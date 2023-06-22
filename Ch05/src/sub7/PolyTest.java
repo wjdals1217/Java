@@ -52,6 +52,7 @@ public class PolyTest {
 		}else if(a1 instanceof Eagle) {
 			System.out.println("a1은 Eagle 입니다.");
 		}else if(a1 instanceof Shark) {
+			
 			System.out.println("a1은 Shark 입니다.");
 		}
 		
