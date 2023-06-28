@@ -44,7 +44,7 @@ public class RegularExpressionTest {
 							 "\\W",    // 특수문자
 							};
 		
-		String[] words = {"apple", "123한글", "123456", "011", "hello", " 홍길동", "1", "Banana", "APPLE", "#"}; // 검증문자열
+		String[] words = {"apple", "123abc", "123456", "011한글", "hello", " 홍길동", "1", "Banana", "APPLE", "#"}; // 검증문자열
 		
 		for(String word : words) {
 			
