@@ -32,6 +32,9 @@ public class Test09 {
 		Circle circle = new Circle();
 		Triangle triangle = new Triangle();
 		
+		circle.draw();
+		triangle.draw();
+		
 		here.draw(circle);
 		here.draw(triangle);
 	}
