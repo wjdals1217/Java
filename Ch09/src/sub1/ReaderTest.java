@@ -49,6 +49,7 @@ public class ReaderTest {
 				
 				}
 				// 스트림 해제
+				
 				fr.close();
 				fw.close();
 			
