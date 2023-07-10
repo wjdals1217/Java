@@ -3,17 +3,19 @@ package sub3;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 
-public class MyCalc {
+public class MyCalc extends JFrame {
 
-	private JFrame frmMycalcV;
+	private JPanel contentPane;
 	private JTextField txtDsp;
 
 	private int num1 = 0;
@@ -28,8 +30,8 @@ public class MyCalc {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MyCalc window = new MyCalc();
-					window.frmMycalcV.setVisible(true);
+					MyCalc frame = new MyCalc();
+					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -37,6 +39,9 @@ public class MyCalc {
 		});
 	}
 
+	ArrayList<Double> numberList = new ArrayList<>(); // 숫자를 저장하는 리스트
+	ArrayList<String> arithList = new ArrayList<>(); // 연산자를 저장하는 리스트
+	static final Double ERROR_NUM = -99999.999; // 오류넘버;
 	/**
 	 * Create the application.
 	 */
@@ -48,8 +53,8 @@ public class MyCalc {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frmMycalcV = new JFrame();
-		frmMycalcV.setTitle("MyCalc v1.0");
+		frame = new JFrame();
+		frame.setTitle("MyCalc v1.0");
 		frmMycalcV.setBounds(100, 100, 279, 372);
 		frmMycalcV.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmMycalcV.getContentPane().setLayout(null);
