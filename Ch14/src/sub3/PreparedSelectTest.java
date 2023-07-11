@@ -11,10 +11,19 @@ import java.util.List;
  * 날짜 : 2023/07/11
  * 이름 : 최정민
  * 내용 : PreparedStatement 실습하기
+ * 
+ * PreparedStatement
+ *  - 기존 Statement 보다 향상된 동적 SQL 생성을 위한 Statement
+ *  - Query Parameter에 갑을 Mapping 시켜 쿼리 실행
+ *  
+ *  VO(Value Object)객체
+ *   - 도메인 값 속성을 갖는 객체
+ *   - 테이블 개체(Entity)를 객체(Object)로 변환할 때 사용하는 객체
+ *   - DTO와 구분됨
  */
 
 // 데이터베이스의 개체(Entity)는 Java의 객체(Object)로 변환 
-// vo객체 : 테이블 개체(Entity)가 변환되는 객체. 접미사로 vo를 붙여준다
+// VO객체 : 테이블 개체(Entity)가 변환되는 객체. 접미사로 VO를 붙여준다
 
 class User2VO {
 	private String uid;
