@@ -28,7 +28,7 @@ public class CRUDTest {
 		
 		while(true) {
 			System.out.println("종료:0, 입력:1, 조회:2, 검색:3, 수정:4, 삭제:5");
-			System.out.println("선택 : ");
+			System.out.print("선택 : ");
 			
 			int answer =sc.nextInt();
 			if(answer == 0) {
@@ -81,17 +81,17 @@ public class CRUDTest {
 				
 				UserVO vo = new UserVO();
 				
-				System.out.println("수정 회원 아이디 입력 : ");
+				System.out.print("수정 회원 아이디 입력 : ");
 				vo.setUid(sc.next());
 				
 				
-				System.out.println("수정 회원 이름 입력 : ");
+				System.out.print("수정 회원 이름 입력 : ");
 				vo.setName(sc.next());
 				
-				System.out.println("수정 회원 휴대폰 입력 : ");
+				System.out.print("수정 회원 휴대폰 입력 : ");
 				vo.setHp(sc.next());
 				
-				System.out.println("수정 회원 나이 입력 : ");
+				System.out.print("수정 회원 나이 입력 : ");
 				vo.setAge(sc.nextInt());
 				
 				int result = UserDAO.getInstance().updateUser(vo);
@@ -104,17 +104,24 @@ public class CRUDTest {
 			
 			}else if(answer == 5) {
 				// 삭제
-				System.out.println("삭제할 회원 아이디 입력 : ");
+				System.out.print("삭제할 회원 아이디 입력 : ");
 				String uid = sc.next();
 				
-				UserVO user = UserDAO.getInstance().deleteUser(uid);
+				int result = UserDAO.getInstance().deleteUser(uid);
 				
-				System.out.println(uid+"회원 삭제 완료...");
+				if(result > 0) {
+					System.out.println(uid+"회원 삭제 완료...");
+				}else {
+					System.out.println("삭제할 사용자가 존재하지 않습니다.");
+				}
+				
 				
 				
 			}
 			
 		}
+		
+		sc.close();
 		
 		System.out.println("회원관리매니저 종료...");
 	}// main end

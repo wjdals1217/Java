@@ -131,13 +131,14 @@ public class UserDAO {
 		return result;
 		
 	}
-	public UserVO deleteUser(String uid) {
-		UserVO vo = new UserVO();
+	public int deleteUser(String uid) {
+		int result = 0;
+		
 		try {
 			conn = getConnection();
 			psmt = conn.prepareStatement(SQL.DELETE_USER);
 			psmt.setString(1, uid);
-			psmt.executeUpdate();
+			result = psmt.executeUpdate();
 			
 			close();
 			
@@ -145,7 +146,7 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 		
-		return vo;
+		return result;
 		
 	}
 
