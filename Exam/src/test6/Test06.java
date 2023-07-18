@@ -29,11 +29,43 @@ public class Test06 {
 		printArray("정렬 전", values);
 		
 		Arrays.sort(values);
+		printArray("정렬 후", values);
+		
+		System.out.print("=> 검색할 숫자 입력 : ");
 		int findNum = sc.nextInt();
 		int count = 0;
 		
 		// 선형탐색
 		for (int i = 0; i < values.length - 1; i++) {
+			count++;
+			if(values[i] == findNum) {
+				System.out.printf("values[%d] = %d\n", i, findNum);
+				System.out.printf("선형탐색 비교 횟수 %d회\n", count);
+				break;
+			}
+		}
+		
+		// 이진탐색
+		count = 0;
+		int low = 0;
+		int high = values.length -1;
+		
+		while(low <= high) {
+			count++;
+			int mid = (low + high) / 2;
+			
+			if(values[mid] == findNum) {
+				System.out.printf("values[%d] =  %d\n", mid, findNum);
+				System.out.printf("이진탐색 비교 회수 %d회\n", count);
+				break;
+			}
+			else if(findNum > values[mid]) {
+				low = mid +1;
+			}else {
+				high = mid - 1;
+			}
+			
+			sc.close();
 			
 		}
 	}
