@@ -12,6 +12,22 @@ class BankAccount {
 		this.name =name;
 		this.balance =balance;
 	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	s
+	set
 	
 	@Override
 	public String toString() {
@@ -69,7 +85,7 @@ public class Test20 {
 					}
 				}
 			}else if(answer == 3) {
-				private static void deposit() {
+
 					System.out.println("-----------");
 					System.out.println("예금");
 					System.out.println("-----------");
@@ -78,19 +94,26 @@ public class Test20 {
 					String id = sc.next();
 					System.out.println("예금액 : ");
 					int balance = sc.nextInt();
-					
-					BankAccount account = findA;
-				}
-				
-				
-				for (int i = 0; i < accounts.length; i++) {
-					if(id.equals(account[i][0])) {
-						
+
+					for(BankAccount account : accounts) {
+						if(account != null) {
+							String[] idNum = new String[accounts.length];
+							for(int i =0; i < accounts.length; i++) {
+								idNum[i] += account.toString().substring(0, 7);
+							}
+							for(int i = 0; i < accounts.length; i++) {
+								if(idNum[i].equals(id)) {
+									account.toString().substring(i)
+								}
+							}
+							
+							
+						}
 					}
-				}
-				BankAccount account = new BankAccount(id, id, answer);
 				
-				System.out.println("예금액 : ");
+				
+				
+				
 			}else if(answer == 4) {
 				System.out.println("-----------");
 				System.out.println("출금");
