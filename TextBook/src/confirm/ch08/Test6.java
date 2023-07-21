@@ -4,13 +4,6 @@ interface Soundable {
 	public String sound();
 }
 
-class SoundableExample {
-	public static void printSound(Soundable soundable) {
-		System.out.println(soundable.sound());
-	}
-}
-
-
 class Cat implements Soundable {
 	@Override
 	public String sound() {
@@ -25,9 +18,18 @@ class Dog implements Soundable {
 	}
 }
 
+
+
+
 public class Test6 {
+
+
+	public static void printSound(Soundable soundable) {
+		System.out.println(soundable.sound());
+	}
+
 	public static void main(String[] args) {
-		printSound(new Cat);
-		printSound(new Dog);
+		printSound(new Cat());
+		printSound(new Dog());
 	}
 }
