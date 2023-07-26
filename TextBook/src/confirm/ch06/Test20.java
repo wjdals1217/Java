@@ -135,7 +135,8 @@ public class Test20 {
 					}
 				}
 				if(!accountFound) {
-					System.out.println("잘못된 계좌번호 입니다. 다시 입력해주세요.");
+					System
+					.out.println("잘못된 계좌번호 입니다. 다시 입력해주세요.");
 				}
 
 				
