@@ -14,8 +14,11 @@ public class Test08 {
 		int y = sc.nextInt();
 		
 		if(y>=1000 && y<=3000) {
-			
+			int year = y-543;
+			System.out.println(year);
 		}
+		
+		sc.close();
 	}
 
 }
