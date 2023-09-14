@@ -1,21 +1,31 @@
 package step2;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-//두 정수 A와 B를 입력받은 다음, A/B를 출력하는 프로그램을 작성하시오.
+// 2884번 알람시계	
 
 public class Test05 {
-	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String str = br.readLine();
+		StringTokenizer st = new StringTokenizer(str, " ");
 		
-		Scanner sc = new Scanner(System.in);
+		int h = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
 		
-		double a =sc.nextDouble();
-		double b =sc.nextDouble();
-		
-		System.out.println(a / b);
-		
-		sc.close();
+		if(m < 45) {
+			h--;
+			m=60 - (45 - m);
+			if(h < 0) {
+				h = 23;
+			}
+			System.out.println(h+" "+m);
+		}else {
+			System.out.println(h+" "+(m - 45));
+		}
 	}
 	
 
