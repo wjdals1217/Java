@@ -2,23 +2,26 @@ package step2;
 
 import java.util.Scanner;
 
-//두 자연수 A와 B가 주어진다. 이때, A+B, A-B, A*B, A/B(몫), A%B(나머지)를 출력하는 프로그램을 작성하시오. 
+// 2525번 오븐시계
 
 public class Test06 {
 	public static void main(String[] args) {
 		
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
-		int a = scan.nextInt();
-		int b = scan.nextInt();
+		int A = sc.nextInt();
+		int B = sc.nextInt();
 		
-		scan.close();
+		int C = sc.nextInt();
 		
-		System.out.println(a+b);
-		System.out.println(a-b);
-		System.out.println(a*b);
-		System.out.println(a/b);
-		System.out.println(a%b);
+		int min = 60 * A + B;
 		
+		min +=C;
+		
+		int hour = (min/60)%24;
+		
+		int minute = min % 60;
+		
+		System.out.println(hour + " "+minute);
 	}
 }
